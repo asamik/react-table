@@ -4,8 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "setup": "rm -rf public/vendor node_modules && npm i && bower i",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack && node server.js"
+    "start": "webpack && node server.js",
+    "postinstall": "bower i"
+  },
+  "engines": {
+    "node": "5.0.0"
   },
   "author": "",
   "license": "ISC",
@@ -15,8 +20,8 @@
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "bower": "^1.6.9",
     "express": "^4.13.3",
-    "fixed-data-table": "^0.6.0",
     "react": "^0.14.3",
     "react-bootstrap": "^0.28.1",
     "react-bootstrap-table": "^1.2.15",
